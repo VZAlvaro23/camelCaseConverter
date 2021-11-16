@@ -47,7 +47,6 @@ const result = document.getElementById('result')
 const mediaQuery = window.matchMedia('(min-width: 375px)')
 
 if (mediaQuery.matches) {
-  
   title.remove(titleImage)
   convert.removeChild(convertButton);
   result.removeChild(resetButton)
