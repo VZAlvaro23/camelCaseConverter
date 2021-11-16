@@ -8,14 +8,24 @@
     <title>camelCaseConverter</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>camelCaseConverter</h1>
-    <input type = "text" id = "text" class = "text" placeholder = "type something...">
-    <input type = "text" id = "result" class = "result">
-    <input type = "button" id = "convertButton" class = "convertButton" value = "convert">
-    <input type = "button" id = "resetButton" class = "resetButton" value = "reset">
+    <div class = "container" id = "container">
+        <div id = "title" class = "title">
+            <h1>camelCaseConverter</h1>
+            <img src = "img/camello.png" alt = "icon design by smalllikeart">
+        </div>
+        <div id = "convert">
+            <input type = "text" id = "text" class = "text" placeholder = "type something...">
+            <input type = "button" id = "convertButton" class = "convertButton" value = "convert">
+        </div>
+        <div id = "resultdiv" class = "resultdiv">
+            <input type = "text" id = "result" class = "result">
+            <input type = "button" id = "resetButton" class = "resetButton" value = "reset">
+        </div>
+    </div>
+    <!-- <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div> -->
     <script src = "scripts/scripts.js"></script>
 </body>
 </html>
