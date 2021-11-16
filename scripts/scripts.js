@@ -23,21 +23,32 @@ return wordsArray[0] + resultArray.join("")
 
 }
 
-const text = document.getElementById('text')
-const result = document.getElementById('result')
+const userInput = document.getElementById('userInput')
+const resultInput = document.getElementById('resultInput')
 const convertButton = document.getElementById('convertButton')
 const resetButton = document.getElementById('resetButton')
 
 convertButton.addEventListener('click', function() {
-   result.value = camelCaseConverter(text.value)
-   result.classList.add("correct")
+   resultInput.value = camelCaseConverter(userInput.value)
+   resultInput.classList.add("correct")
 })
 
 resetButton.addEventListener('click', function () {
-  text.value = ""
-  result.value = ""
-  result.classList.remove("correct")
+  userInput.value = ""
+  resultInput.value = ""
+  resultInput.classList.remove("correct")
 })
 
-console.log(camelCaseConverter("soy alvaro el mesias"))
+const titleImage = document.getElementById('titleImage')
+const title = document.getElementById('title')
+const convert = document.getElementById('convert')
+const result = document.getElementById('result')
+
+const mediaQuery = window.matchMedia('(min-width: 375px)')
+
+if (mediaQuery.matches) {
+  title.remove(titleImage)
+  convert.removeChild(convertButton);
+  result.removeChild(resetButton)
+}
 
