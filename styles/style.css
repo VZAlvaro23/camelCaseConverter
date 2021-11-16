@@ -1,15 +1,28 @@
 body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
     background-color: #6685F4;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
+    display: inline;
     font-family: 'Raleway', sans-serif;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    align-self: end;
+    margin: 0;
 }
 
 input[type='text'] {
     border-radius: 3px;
     border: 1px solid black;
+    width: 80%;
+}
+
+.resultInput {
+    background-color: #D0FFD5;
 }
 
 .convertButton {
@@ -31,4 +44,23 @@ input[type='text'] {
 .correct {
     background-color: #D0FFD5;
 }
+img {
+    width: 20%;
+    margin-left: 10px;
+}
 
+.container {
+    width: 30vw;
+}
+
+.container div {
+    display: flex;
+    justify-content: end;
+}
+input[type='button'] {
+    margin-left: 10px;
+    width: 20%;
+}
+div:nth-child(3) {
+    margin-top: 10px;
+}
