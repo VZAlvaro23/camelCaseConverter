@@ -39,5 +39,17 @@ resetButton.addEventListener('click', function () {
   resultInput.classList.remove("correct")
 })
 
-console.log(camelCaseConverter("soy alvaro el mesias"))
+const titleImage = document.getElementById('titleImage')
+const title = document.getElementById('title')
+const convert = document.getElementById('convert')
+const result = document.getElementById('result')
+
+const mediaQuery = window.matchMedia('(min-width: 375px)')
+
+if (mediaQuery.matches) {
+  
+  title.remove(titleImage)
+  convert.removeChild(convertButton);
+  result.removeChild(resetButton)
+}
 

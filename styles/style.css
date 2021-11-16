@@ -69,3 +69,16 @@ div:nth-child(3) {
     position: absolute;
     align-self: end;
 }
+
+@media only screen and (min-width: 375px) {
+    .container {
+        width: 80vw;
+    }
+    .container div {
+        justify-content: center;
+    }
+    img {
+        width: 40vw;
+    }
+}
+
