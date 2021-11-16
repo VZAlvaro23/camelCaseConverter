@@ -10,35 +10,35 @@ body {
 h1 {
     display: inline;
     font-family: 'Raleway', sans-serif;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
     align-self: end;
     margin: 0;
+    word-break: break-all;
 }
 
 input[type='text'] {
-    border-radius: 3px;
-    border: 1px solid black;
+    border: 3.5px solid black;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
     width: 80%;
-}
-
-.resultInput {
-    background-color: #D0FFD5;
+    height: 1.7em;
 }
 
 .convertButton {
     background-color: black;
     border-radius: 3px;
     color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: 1px solid black;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+    border: 3.5px solid black;
+    font-family: 'Roboto', sans-serif;
 }
 
 .resetButton {
     background-color: red;
     border-radius: 3px;
-    color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: 1px solid black;
+    color: black;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+    border: 3.5px solid black;
+    font-family: 'Roboto', sans-serif;
 }
 
 .correct {
@@ -50,7 +50,7 @@ img {
 }
 
 .container {
-    width: 30vw;
+    width: 35vw;
 }
 
 .container div {
@@ -63,4 +63,9 @@ input[type='button'] {
 }
 div:nth-child(3) {
     margin-top: 10px;
+}
+
+.atribution {
+    position: absolute;
+    align-self: end;
 }
