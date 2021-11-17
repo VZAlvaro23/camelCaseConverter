@@ -45,7 +45,7 @@ const convert = document.getElementById('convert')
 const result = document.getElementById('result')
 const container = document.getElementById('container')
 
-const mediaQuery = window.matchMedia('(max-width: 400px)')
+const mediaQuery = window.matchMedia('(max-width: 600px)')
 
 if (mediaQuery.matches) {
   const div = document.createElement("div")
