@@ -43,12 +43,21 @@ const titleImage = document.getElementById('titleImage')
 const title = document.getElementById('title')
 const convert = document.getElementById('convert')
 const result = document.getElementById('result')
+const container = document.getElementById('container')
 
-const mediaQuery = window.matchMedia('(min-width: 375px)')
+const mediaQuery = window.matchMedia('(max-width: 400px)')
 
 if (mediaQuery.matches) {
+  const div = document.createElement("div")
+  const convertButtonMobile = convertButton.cloneNode(true)
+  const resetButtonMobile = resetButton.cloneNode(true)
+
   title.remove(titleImage)
-  convert.removeChild(convertButton);
+  convert.removeChild(convertButton)
   result.removeChild(resetButton)
+  div.appendChild(convertButtonMobile)
+  div.appendChild(resetButtonMobile)
+  container.appendChild(div)
+  div.classList.add("mobile")
 }
 

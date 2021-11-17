@@ -51,6 +51,7 @@ img {
 
 .container {
     width: 35vw;
+    min-width: 407px;
 }
 
 .container div {
@@ -70,7 +71,11 @@ div:nth-child(3) {
     align-self: end;
 }
 
-@media only screen and (min-width: 375px) {
+.mobile {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 400px) {
     .container {
         width: 80vw;
     }
@@ -80,5 +85,14 @@ div:nth-child(3) {
     img {
         width: 40vw;
     }
+    input[type='button'] {
+        margin-left: 0px;
+        width: 40%;
+    }
+    input[type='button'].resetButton {
+        margin-left: 10px;
+    }
+
+
 }
 
