@@ -31,6 +31,7 @@ const resetButton = document.getElementById('resetButton')
 convertButton.addEventListener('click', function() {
    resultInput.value = camelCaseConverter(userInput.value)
    resultInput.classList.add("correct")
+   
 })
 
 resetButton.addEventListener('click', function () {
@@ -45,19 +46,7 @@ const convert = document.getElementById('convert')
 const result = document.getElementById('result')
 const container = document.getElementById('container')
 
-const mediaQuery = window.matchMedia('(max-width: 400px)')
+const mediaQuery = window.matchMedia('(max-width: 425px)')
 
-if (mediaQuery.matches) {
-  const div = document.createElement("div")
-  const convertButtonMobile = convertButton.cloneNode(true)
-  const resetButtonMobile = resetButton.cloneNode(true)
 
-  title.remove(titleImage)
-  convert.removeChild(convertButton)
-  result.removeChild(resetButton)
-  div.appendChild(convertButtonMobile)
-  div.appendChild(resetButtonMobile)
-  container.appendChild(div)
-  div.classList.add("mobile")
-}
 

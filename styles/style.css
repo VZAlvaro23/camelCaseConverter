@@ -1,7 +1,9 @@
 html {
     height: 100vh;
+    width: 100vw;
 }
 body {
+    width: 100vw;
     display: flex;
     height: 100vh;
     margin: 0;
@@ -44,9 +46,7 @@ input[type='text'] {
     font-family: 'Roboto', sans-serif;
 }
 
-.correct {
-    background-color: #D0FFD5;
-}
+
 img {
     width: 20%;
     margin-left: 10px;
@@ -68,17 +68,36 @@ input[type='button'] {
 div:nth-child(3) {
     margin-top: 10px;
 }
+div:nth-child(4) {
+    margin-top: 10px;
+}
 
 .atribution {
     position: absolute;
-    align-self: end;
+    bottom: 0;
 }
 
 .mobile {
     margin-top: 10px;
 }
 
-@media only screen and (max-width: 400px) {
+.white {
+    background-color: white;
+}
+.correct {
+    background-color: #D0FFD5;
+}
+
+
+@media only screen and (max-width: 450px) {
+
+    #convert .convertButton, #result .resetButton {
+        display: none;
+    }
+
+    .titleImage {
+        display: none;
+    }
     .container {
         width: 80vw;
     }
@@ -89,13 +108,19 @@ div:nth-child(3) {
         width: 40vw;
     }
     input[type='button'] {
-        margin-left: 0px;
+        margin: 5px;
         width: 40%;
     }
     input[type='button'].resetButton {
-        margin-left: 10px;
+       
     }
 
+}
+
+@media only screen and (min-width: 450px) {
+    #mobileVersion {
+        display: none;
+    }
 
 }
 
