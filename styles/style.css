@@ -76,6 +76,7 @@ div:nth-child(4) {
 .atribution {
     position: absolute;
     bottom: 0;
+    font-size: 0.7rem;
 }
 
 .mobile {
