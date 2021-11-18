@@ -16,15 +16,14 @@ body {
 h1 {
     display: inline;
     font-family: 'Raleway', sans-serif;
-    text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
-    align-self: end;
-    margin: 0;
+    text-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
+    align-self: flex-end;
     word-break: break-all;
 }
 
 input[type='text'] {
     border: 3.5px solid black;
-    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
     width: 80%;
     height: 1.7em;
 }
@@ -33,7 +32,7 @@ input[type='text'] {
     background-color: black;
     border-radius: 3px;
     color: white;
-    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
     border: 3.5px solid black;
     font-family: 'Roboto', sans-serif;
 }
@@ -42,7 +41,7 @@ input[type='text'] {
     background-color: red;  
     border-radius: 3px;
     color: black;
-    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
     border: 3.5px solid black;
     font-family: 'Roboto', sans-serif;
 }
@@ -60,7 +59,7 @@ img {
 
 .container div {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 input[type='button'] {
     margin-left: 10px;

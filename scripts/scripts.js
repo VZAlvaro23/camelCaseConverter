@@ -1,61 +1,48 @@
-
 const wordFirstMayus = (word) => {
-  
-  const firstLetter = word.charAt(0)
+  const firstLetter = word.charAt(0);
 
-  return firstLetter.toUpperCase() + word.substring(1)
+  return firstLetter.toUpperCase() + word.substring(1);
+};
 
+function camelCaseConverter(words) {
+  const resultArray = [];
+
+  const wordsArray = words.split('');
+
+  for (let i = 1; i < wordsArray.length; i += 1) {
+    const firstCaseMayus = wordFirstMayus(wordsArray[i]);
+
+    resultArray.push(firstCaseMayus);
+  }
+
+  return wordsArray[0] + resultArray.join('');
 }
 
-const camelCaseConverter = (words) => {
+const userInput = document.getElementById('userInput');
+const resultInput = document.getElementById('resultInput');
+const convertButton = document.getElementById('convertButton');
+const resetButton = document.getElementById('resetButton');
+const convertButtonMobile = document.getElementById('convertButtonMobile');
+const resetButtonMobile = document.getElementById('resetButtonMobile');
 
-const resultArray = []
+convertButton.addEventListener('click', () => {
+  resultInput.value = camelCaseConverter(userInput.value);
+  resultInput.classList.add('correct');
+});
 
-const wordsArray = words.split(" ")
+resetButton.addEventListener('click', () => {
+  userInput.value = '';
+  resultInput.value = '';
+  resultInput.classList.remove('correct');
+});
 
-for (let i = 1; i < wordsArray.length; i++) {
-  let firstCaseMayus = wordFirstMayus(wordsArray[i])
+convertButtonMobile.addEventListener('click', () => {
+  resultInput.value = camelCaseConverter(userInput.value);
+  resultInput.classList.add('correct');
+});
 
-  resultArray.push(firstCaseMayus)
-}
-
-return wordsArray[0] + resultArray.join("")
-
-}
-
-const userInput = document.getElementById('userInput')
-const resultInput = document.getElementById('resultInput')
-const convertButton = document.getElementById('convertButton')
-const resetButton = document.getElementById('resetButton')
-const convertButtonMobile = document.getElementById('convertButtonMobile')
-const resetButtonMobile = document.getElementById('resetButtonMobile')
-
-
-convertButton.addEventListener('click', function() {
-   resultInput.value = camelCaseConverter(userInput.value)
-   resultInput.classList.add("correct")
-})
-
-resetButton.addEventListener('click', function () {
-  userInput.value = ""
-  resultInput.value = ""
-  resultInput.classList.remove("correct")
-})
-
-convertButtonMobile.addEventListener('click', function() {
-  resultInput.value = camelCaseConverter(userInput.value)
-  resultInput.classList.add("correct")
-})
-
-resetButtonMobile.addEventListener('click', function () {
- userInput.value = ""
- resultInput.value = ""
- resultInput.classList.remove("correct")
-})
-
-
-
-
-
-
-
+resetButtonMobile.addEventListener('click', () => {
+  userInput.value = '';
+  resultInput.value = '';
+  resultInput.classList.remove('correct');
+});
