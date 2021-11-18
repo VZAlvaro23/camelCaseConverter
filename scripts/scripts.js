@@ -27,11 +27,13 @@ const userInput = document.getElementById('userInput')
 const resultInput = document.getElementById('resultInput')
 const convertButton = document.getElementById('convertButton')
 const resetButton = document.getElementById('resetButton')
+const convertButtonMobile = document.getElementById('convertButtonMobile')
+const resetButtonMobile = document.getElementById('resetButtonMobile')
+
 
 convertButton.addEventListener('click', function() {
    resultInput.value = camelCaseConverter(userInput.value)
    resultInput.classList.add("correct")
-   
 })
 
 resetButton.addEventListener('click', function () {
@@ -40,13 +42,20 @@ resetButton.addEventListener('click', function () {
   resultInput.classList.remove("correct")
 })
 
-const titleImage = document.getElementById('titleImage')
-const title = document.getElementById('title')
-const convert = document.getElementById('convert')
-const result = document.getElementById('result')
-const container = document.getElementById('container')
+convertButtonMobile.addEventListener('click', function() {
+  resultInput.value = camelCaseConverter(userInput.value)
+  resultInput.classList.add("correct")
+})
 
-const mediaQuery = window.matchMedia('(max-width: 425px)')
+resetButtonMobile.addEventListener('click', function () {
+ userInput.value = ""
+ resultInput.value = ""
+ resultInput.classList.remove("correct")
+})
+
+
+
+
 
 
 
