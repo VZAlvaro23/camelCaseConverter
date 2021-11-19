@@ -4,10 +4,10 @@ const wordFirstMayus = (word) => {
   return firstLetter.toUpperCase() + word.substring(1);
 };
 
-function camelCaseConverter(words) {
+const camelCaseConverter = (words) => {
   const resultArray = [];
 
-  const wordsArray = words.split('');
+  const wordsArray = words.split(' ');
 
   for (let i = 1; i < wordsArray.length; i += 1) {
     const firstCaseMayus = wordFirstMayus(wordsArray[i]);
@@ -16,7 +16,7 @@ function camelCaseConverter(words) {
   }
 
   return wordsArray[0] + resultArray.join('');
-}
+};
 
 const userInput = document.getElementById('userInput');
 const resultInput = document.getElementById('resultInput');
