@@ -46,3 +46,14 @@ resetButtonMobile.addEventListener('click', () => {
   resultInput.value = '';
   resultInput.classList.remove('correct');
 });
+
+/* Página actual activo */
+
+const actualUrl = location.href;
+const camelCaseConverterButton = document.getElementById('camel-button');
+const RomanNumeralConverterButton = document.getElementById('banco-button');
+const camelCaseConverterButtonUrl = document.getElementById('camelCaseConverterButtonUrl').getAttribute('href');
+const RomanNumeralConverterButtonUrl = document.getElementById('RomanNumeralConverterButtonUrl').getAttribute('href');
+if (!actualUrl.includes(RomanNumeralConverterButtonUrl)) {
+  RomanNumeralConverterButton.classList.add('active');
+} else { camelCaseConverterButton.classList.add('active'); }
